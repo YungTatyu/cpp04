@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:31:40 by tterao            #+#    #+#             */
-/*   Updated: 2023/08/02 16:32:30 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/17 18:31:08 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat() : Animal()
 Cat::Cat(const Cat& obj)
 {
 	std::cout << "Cat copy constructor called\n";
-	Animal(obj);
+	this->type = obj.type;
 }
 
 Cat::~Cat()
@@ -29,7 +29,7 @@ Cat::~Cat()
 	std::cout << "Cat destructor called\n";
 }
 
-void	makeSound()
+void	Cat::makeSound() const
 {
 	std::cout << "meow\n";
 }
@@ -37,4 +37,5 @@ void	makeSound()
 Cat&	Cat::operator=(const Cat& obj)
 {
 	Animal::operator=(obj);
+	return (*this);
 }

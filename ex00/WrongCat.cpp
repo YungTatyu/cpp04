@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:51:52 by tterao            #+#    #+#             */
-/*   Updated: 2023/08/02 16:52:34 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/17 18:29:40 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ WrongCat::WrongCat() : WrongAnimal()
 WrongCat::WrongCat(const WrongCat& obj)
 {
 	std::cout << "WrongCat copy constructor called\n";
-	WrongAnimal(obj);
+	this->type = obj.type;
 }
 
 WrongCat::~WrongCat()
@@ -32,4 +32,5 @@ WrongCat::~WrongCat()
 WrongCat&	WrongCat::operator=(const WrongCat& obj)
 {
 	WrongAnimal::operator=(obj);
+	return (*this);
 }

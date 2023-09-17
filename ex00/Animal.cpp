@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 15:39:39 by tterao            #+#    #+#             */
-/*   Updated: 2023/08/02 16:11:53 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/17 20:34:30 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,19 @@ Animal::~Animal()
 	std::cout << "Animal destructor called\n";
 }
 
-std::string	Animal::getType()
+std::string	Animal::getType() const
 {
 	return (type);
 }
 
-void	Animal::makeSound(){}
+void	Animal::makeSound() const
+{
+	std::cout << "I'm an animal\n";
+}
 
 Animal&	Animal::operator=(const Animal& obj)
 {
 	if (this != &obj)
-	{
 		this->type = obj.type;
-	}
 	return (*this);
 }
