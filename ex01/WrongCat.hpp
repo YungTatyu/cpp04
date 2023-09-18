@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 16:12:31 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/18 15:59:11 by tterao           ###   ########.fr       */
+/*   Created: 2023/08/02 16:48:44 by tterao            #+#    #+#             */
+/*   Updated: 2023/09/18 14:12:26 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef WRONGCAT_H
+#define WRONGCAT_H
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 public:
-	Dog();
-	Dog(const Dog& obj);
-	~Dog();
-	void	makeSound() const;
-	Dog&	operator=(const Dog& obj);
+	WrongCat();
+	WrongCat(const WrongCat& obj);
+	~WrongCat();
+	WrongCat&	operator=(const WrongCat& obj);
+	void		makeSound() const;
 };
+
 #endif
