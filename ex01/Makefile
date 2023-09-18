@@ -24,7 +24,7 @@ fclean:	clean
 clean:
 	$(RM) $(OBJS)
 
-sanitize:	CXXFLAGS += -g -fsanitize=address
+sanitize:	CXXFLAGS += -g -fsanitize=address -g
 sanitize:	re
 
 leaks:	CXXFLAGS += -DLEAKS

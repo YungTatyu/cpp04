@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:07:10 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/18 18:00:28 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 19:29:08 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,46 @@ int main()
 {
 	{
 		std::cout << "-----default test start-----\n";
-		const Animal* dog = new Dog();
-		const Animal* cat = new Cat();
-		dog->learnNewThing("trick");
-		dog->learnNewThing("trick2");
-		cat->learnNewThing("scrach");
-		cat->learnNewThing("scrach2");
-		dog->printIdeas();
-		cat->printIdeas();
-		delete dog;//should not create a leak
-		delete cat;
+		const Animal* dog0 = new Dog();
+		const Animal* cat0 = new Cat();
+		delete dog0;//should not create a leak
+		delete cat0;
 		std::cout << "-----default test end-----\n";
+	}
+	{
+		std::cout << "-----copy operator test start-----\n";
+		Dog dog;
+		Cat cat;
+		dog.learnNewThing("trick");
+		dog.learnNewThing("trick2");
+		cat.learnNewThing("scrach");
+		cat.learnNewThing("scrach2");
+		dog.printIdeas();
+		cat.printIdeas();
+		Dog dog2;
+		Cat cat2;
+		dog2 = dog;
+		cat2 = cat;
+		dog2.printIdeas();
+		cat2.printIdeas();
+		std::cout << "-----copy operator test end-----\n";
+	}
+
+	{
+		Dog dog;
+		Cat cat;
+		std::cout << "-----copy constructor test start-----\n";
+		dog.learnNewThing("trick3");
+		dog.learnNewThing("trick4");
+		cat.learnNewThing("scrach3");
+		cat.learnNewThing("scrach4");
+		dog.printIdeas();
+		cat.printIdeas();
+		Dog dog2(dog);
+		Cat cat2(cat);
+		dog2.printIdeas();
+		cat2.printIdeas();
+		std::cout << "-----copy constructor test end-----\n";
 	}
 	{
 
