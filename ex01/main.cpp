@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:07:10 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/18 19:29:08 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 21:43:54 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ int main()
 		std::cout << "-----copy constructor test end-----\n";
 	}
 	{
-
 		std::cout << "\n-----Animals objs test start-----\n";
 		Animal	*Animals[100];
 		size_t	i = 0;
