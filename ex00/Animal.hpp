@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 15:35:55 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/17 17:12:47 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 15:01:56 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ public:
 	Animal();
 	Animal(std::string type);
 	Animal(const Animal& obj);
-	~Animal();
-	std::string	getType() const;
-	void		makeSound() const;
+	virtual ~Animal(); //upcastする場合、仮想ディストラクタにしなければ、継承クラスのディストラクタが呼ばれない
+	std::string		getType() const;
+	virtual void	makeSound() const; //upcast、継承クラスでメンバ関数をオーバーロードする場合、仮想関数として扱う
 	Animal&	operator=(const Animal& obj);
 };
 

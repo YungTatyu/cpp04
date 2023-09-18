@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:31:40 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/17 18:31:08 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 14:47:58 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cat::~Cat()
 
 void	Cat::makeSound() const
 {
-	std::cout << "meow\n";
+	std::cout << "meow~\n";
 }
 
 Cat&	Cat::operator=(const Cat& obj)

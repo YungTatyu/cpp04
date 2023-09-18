@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:51:52 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/17 18:29:40 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 14:13:27 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ WrongCat&	WrongCat::operator=(const WrongCat& obj)
 {
 	WrongAnimal::operator=(obj);
 	return (*this);
+}
+
+void	WrongCat::makeSound() const
+{
+	std::cout << "WrongCat WrongCat WrongCat\n";
 }

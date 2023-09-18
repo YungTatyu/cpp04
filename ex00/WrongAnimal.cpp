@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:38:46 by tterao            #+#    #+#             */
-/*   Updated: 2023/08/02 16:44:18 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 14:47:05 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "WrongAnimal destructor called\n";
 }
 
-std::string	WrongAnimal::getType()
+std::string	WrongAnimal::getType() const
 {
 	return (type);
 }
 
-void	WrongAnimal::makeSound()
+void	WrongAnimal::makeSound() const
 {
-	std::cout << "yes, im not an animal hehe\n";
+	std::cout << "Wrong Animal hehe\n";
 }
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& obj)

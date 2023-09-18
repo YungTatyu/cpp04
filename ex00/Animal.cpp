@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 15:39:39 by tterao            #+#    #+#             */
-/*   Updated: 2023/09/17 20:34:30 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 14:48:10 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ std::string	Animal::getType() const
 
 void	Animal::makeSound() const
 {
-	std::cout << "I'm an animal\n";
+	std::cout << "Animal Animal\n";
 }
 
 Animal&	Animal::operator=(const Animal& obj)

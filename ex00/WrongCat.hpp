@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:48:44 by tterao            #+#    #+#             */
-/*   Updated: 2023/08/02 16:50:33 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 14:12:26 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ public:
 	WrongCat(const WrongCat& obj);
 	~WrongCat();
 	WrongCat&	operator=(const WrongCat& obj);
+	void		makeSound() const;
 };
 
 #endif

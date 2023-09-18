@@ -6,7 +6,7 @@
 /*   By: tterao <tterao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:37:02 by tterao            #+#    #+#             */
-/*   Updated: 2023/08/02 16:38:09 by tterao           ###   ########.fr       */
+/*   Updated: 2023/09/18 14:46:19 by tterao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ public:
 	WrongAnimal(std::string type);
 	WrongAnimal(const WrongAnimal& obj);
 	~WrongAnimal();
-	std::string		getType();
-	void			makeSound();
+	std::string		getType() const;
+	void			makeSound() const;
 	WrongAnimal&	operator=(const WrongAnimal& obj);
 };
 
