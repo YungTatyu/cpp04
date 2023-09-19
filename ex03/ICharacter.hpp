@@ -5,7 +5,6 @@
 #include "AMateria.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
-#include <iostream>
 
 class ICharacter
 {
