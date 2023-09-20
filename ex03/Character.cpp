@@ -24,6 +24,7 @@ Character	&Character::operator=(const Character& obj)
 	if (this != &obj)
 	{
 		this->name = obj.name;
+		this->numMateria = obj.numMateria;
 		for (size_t i = 0; i < SLOT_SIZE; i++)
 			this->slot[i] = obj.slot[i];
 	}

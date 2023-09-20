@@ -22,3 +22,34 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &obj)
 	}
 	return (*this);
 }
+
+void	MateriaSource::learnMateria(AMateria* m)
+{
+	size_t	i = 0;
+
+	if (i == SOURCE_SIZE)
+		return;
+	while (i < SOURCE_SIZE)
+	{
+		if (sources[i] == nullptr)
+			break;
+		i++;
+	}
+	sources[i] = m;
+	numSource++;
+}
+
+AMateria*	MateriaSource::createMateria(std::string const & type)
+{
+	size_t	i = 0;
+	while (sources[i] != nullptr)
+	{
+		if (sources[i]->getType() == type)
+			break;
+	}
+	if (sources[i] == nullptr)
+		return;
+	AMateria	*newM = new AMateria();
+	
+
+}
