@@ -10,7 +10,7 @@ public:
 	Ice(std::string const & type);
 	~Ice();
 	AMateria*	clone() const;
-	void	use(ICharacter& target);
+	virtual void	use(ICharacter& target);
 };
 
 #endif

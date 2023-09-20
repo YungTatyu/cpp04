@@ -9,7 +9,8 @@ public:
 	Cure();
 	Cure(std::string const & type);
 	~Cure();
-	AMateria*	clone() const;
+	virtual AMateria*	clone() const;
+	virtual void	use(ICharacter& target);
 };
 
 #endif
