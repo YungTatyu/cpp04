@@ -7,15 +7,16 @@ SRCS =	main.cpp	\
 		Cure.cpp	\
 		MateriaSource.cpp
 OBJS = $(SRCS:%.cpp=%.o)
+INCLUDES = -Iincludes/
 RM = rm -f
 
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-	$(CXX) -o $(NAME) $(CXXFLAGS) $(OBJS)
+	$(CXX) -o $(NAME) $(INCLUDES) $(CXXFLAGS) $(OBJS)
 
 $(OBJS):	$(SRCS)
-	$(CXX) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<
 
 re:	fclean	all
 
