@@ -1,8 +1,8 @@
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria(){}
+Cure::Cure() : AMateria("cure") {}
 
-Cure::Cure(std::string const & type) : AMateria(type){}
+// Cure::Cure(std::string const & type) : AMateria(type){}
 
 Cure::~Cure(){}
 

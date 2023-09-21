@@ -41,15 +41,20 @@ void	MateriaSource::learnMateria(AMateria* m)
 
 AMateria*	MateriaSource::createMateria(std::string const & type)
 {
+	AMateria	*newM;
 	size_t	i = 0;
-	while (sources[i] != nullptr)
+
+	while (i < SOURCE_SIZE && sources[i] != nullptr)
 	{
 		if (sources[i]->getType() == type)
 			break;
+		i++;
 	}
-	if (sources[i] == nullptr)
-		return;
-	AMateria	*newM = new AMateria();
-	
-
+	if (i == SOURCE_SIZE || sources[i] == nullptr)
+		return (nullptr);
+	if (sources[i]->getType() == "ice")
+		newM = new Ice(*sources[i]);
+	else
+		newM = new Cure(*sources[i]);
+	return (newM);
 }
