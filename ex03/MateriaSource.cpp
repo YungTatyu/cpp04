@@ -1,4 +1,6 @@
 #include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 MateriaSource::MateriaSource() : numSource(0)
 {
@@ -41,20 +43,15 @@ void	MateriaSource::learnMateria(AMateria* m)
 
 AMateria*	MateriaSource::createMateria(std::string const & type)
 {
-	AMateria	*newM;
 	size_t	i = 0;
 
-	while (i < SOURCE_SIZE && sources[i] != nullptr)
+	while (i < SOURCE_SIZE)
 	{
-		if (sources[i]->getType() == type)
+		if (sources[i] != nullptr && sources[i]->getType() == type)
 			break;
 		i++;
 	}
-	if (i == SOURCE_SIZE || sources[i] == nullptr)
+	if (i == SOURCE_SIZE)
 		return (nullptr);
-	if (sources[i]->getType() == "ice")
-		newM = new Ice(*sources[i]);
-	else
-		newM = new Cure(*sources[i]);
-	return (newM);
+	return sources[i]->clone();
 }

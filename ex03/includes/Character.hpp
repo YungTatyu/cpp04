@@ -2,15 +2,15 @@
 #ifndef CHARCTER_H
 #define CHARCTER_H
 
-#include "AMateria.hpp"
+#include "ICharacter.hpp"
 #include <iostream>
 
-class Character
+class Character : public ICharacter
 {
 private:
 	std::string name;
 	size_t	numMateria;
-	const static size_t	SLOT_SIZE = 4;
+	const static int	SLOT_SIZE = 4;
 	AMateria	*slot[SLOT_SIZE];
 public:
 	Character();

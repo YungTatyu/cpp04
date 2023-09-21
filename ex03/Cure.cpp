@@ -1,4 +1,6 @@
 #include "Cure.hpp"
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 Cure::Cure() : AMateria("cure") {}
 
@@ -6,7 +8,7 @@ Cure::Cure() : AMateria("cure") {}
 
 Cure::~Cure(){}
 
-Cure::Cure(const Cure& obj)
+Cure::Cure(const Cure& obj) : AMateria(obj.getType())
 {
 	operator=(obj);
 }

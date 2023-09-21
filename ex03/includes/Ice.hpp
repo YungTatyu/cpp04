@@ -3,15 +3,12 @@
 
 #include "AMateria.hpp"
 
-class AMateria;
-class ICharacter;
-
 class Ice : public AMateria
 {
 public:
 	Ice();
 	// Ice(std::string const & type);
-	Ice(const AMateria& obj);
+	Ice(const Ice& obj);
 	~Ice();
 	Ice&	operator=(const AMateria& obj);
 	virtual AMateria*	clone() const;

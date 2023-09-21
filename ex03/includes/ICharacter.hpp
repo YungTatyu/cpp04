@@ -2,9 +2,6 @@
 #define ICHARCTER_H
 
 #include <iostream>
-#include "AMateria.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
 
 class AMateria;
 

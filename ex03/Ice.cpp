@@ -1,4 +1,6 @@
 #include "Ice.hpp"
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 Ice::Ice() : AMateria("ice"){}
 
@@ -6,7 +8,7 @@ Ice::Ice() : AMateria("ice"){}
 
 Ice::~Ice(){}
 
-Ice::Ice(const AMateria& obj)
+Ice::Ice(const Ice& obj) : AMateria(obj.getType())
 {
 	operator=(obj);
 }
