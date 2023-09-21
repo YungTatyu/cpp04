@@ -5,6 +5,8 @@
 
 AMateria::AMateria(std::string const & type) : type(type){}
 
+AMateria::~AMateria() {}
+
 AMateria::AMateria(const AMateria& obj)
 {
 	operator=(obj);
