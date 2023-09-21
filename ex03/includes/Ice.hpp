@@ -3,6 +3,9 @@
 
 #include "AMateria.hpp"
 
+class AMateria;
+class ICharacter;
+
 class Ice : public AMateria
 {
 public:

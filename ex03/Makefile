@@ -15,8 +15,11 @@ all:	$(NAME)
 $(NAME):	$(OBJS)
 	$(CXX) -o $(NAME) $(INCLUDES) $(CXXFLAGS) $(OBJS)
 
-$(OBJS):	$(SRCS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<
+# $(OBJS):	$(SRCS)
+# 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<
+
+$(OBJS): %.o : %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 re:	fclean	all
 
