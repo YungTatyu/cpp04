@@ -14,6 +14,9 @@ all:	$(NAME)
 $(NAME):	$(OBJS)
 	$(CXX) -o $(NAME) $(CXXFLAGS) $(OBJS)
 
+$(OBJS):	$(SRCS)
+	$(CXX) $(CXXFLAGS) -c $<
+
 re:	fclean	all
 
 fclean:	clean
