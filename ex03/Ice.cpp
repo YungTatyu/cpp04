@@ -13,7 +13,7 @@ Ice::Ice(const Ice& obj) : AMateria(obj.getType())
 	operator=(obj);
 }
 
-Ice&	Ice::operator=(const AMateria& obj)
+Ice&	Ice::operator=(const Ice& obj)
 {
 	AMateria::operator=(obj);
 	return (*this);

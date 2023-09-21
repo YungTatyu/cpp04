@@ -2,6 +2,7 @@ NAME = a.out
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 SRCS =	main.cpp	\
+		AMateria.cpp	\
 		Character.cpp	\
 		Ice.cpp	\
 		Cure.cpp	\

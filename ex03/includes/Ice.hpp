@@ -10,9 +10,9 @@ public:
 	// Ice(std::string const & type);
 	Ice(const Ice& obj);
 	~Ice();
-	Ice&	operator=(const AMateria& obj);
-	virtual AMateria*	clone() const;
-	virtual void	use(ICharacter& target);
+	Ice&	operator=(const Ice& obj);
+	AMateria*	clone() const;
+	void	use(ICharacter& target);
 };
 
 #endif

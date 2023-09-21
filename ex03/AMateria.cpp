@@ -10,7 +10,7 @@ AMateria::AMateria(const AMateria& obj)
 	operator=(obj);
 }
 
-AMateria::~AMateria(){}
+// AMateria::~AMateria(){}
 
 std::string const &AMateria::getType() const
 {
