@@ -23,5 +23,8 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+	#ifdef LEAKS
+		system("leaks -q a.out");
+	#endif
 	return 0;
 }

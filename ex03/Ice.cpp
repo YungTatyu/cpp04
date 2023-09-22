@@ -4,8 +4,6 @@
 
 Ice::Ice() : AMateria("ice"){}
 
-// Ice::Ice(std::string const & type) : AMateria(type){}
-
 Ice::~Ice(){}
 
 Ice::Ice(const Ice& obj) : AMateria(obj.getType())
